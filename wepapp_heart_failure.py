@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
 import pandas as pd
-import requests,json
+import requests
 
 # from sklearn.preprocessing import StandardScaler
 # from sklearn.preprocessing import OneHotEncoder
@@ -208,7 +208,7 @@ user_input_original_df
 
 
 if st.sidebar.button("Predict"):
-    result = process(user_input_original_df, url+endpoint)
+    result = process(user_input_original_df.values, url+endpoint)
     result.text
 else:
 	pass
